@@ -8,8 +8,10 @@
 
 import Foundation
 import VersaPlayer
+import GoogleInteractiveMediaAds
 
 public protocol VersaPlayerAdManagerBehaviourDelegate: class {
     func willShowAdsFor(player: VersaPlayer)
     func didEndAd()
+    func didFailToLoadADSWith(error: IMAAdError)
 }

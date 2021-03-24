@@ -9,6 +9,7 @@
 import Foundation
 import CoreMedia
 import VersaPlayer
+import GoogleInteractiveMediaAds
 
 public class VersaPlayerAdManagerBehaviour {
     
@@ -33,4 +34,7 @@ public class VersaPlayerAdManagerBehaviour {
         delegate?.didEndAd()
     }
     
+    public func didFailToLoadADSWith(error: IMAAdError) {
+        delegate?.didFailToLoadADSWith(error: error)
+    }
 }
