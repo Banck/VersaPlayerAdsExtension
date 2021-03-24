@@ -123,6 +123,10 @@ public class VersaPlayerAdsManager: VersaPlayerExtension, IMAAdsLoaderDelegate, 
             displayDelegate?.adsDidFinishPlaying()
             showingAds = false
             behaviour.didEndAd()
+        case .TAPPED:
+            if !adsManager.adPlaybackInfo.isPlaying {
+                adsManager.resume()
+            }
         default: break
         }
     }
