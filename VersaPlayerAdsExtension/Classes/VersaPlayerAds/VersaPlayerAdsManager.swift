@@ -87,6 +87,7 @@ public class VersaPlayerAdsManager: VersaPlayerExtension, IMAAdsLoaderDelegate, 
     
     public func adsLoader(_ loader: IMAAdsLoader!, failedWith adErrorData: IMAAdLoadingErrorData!) {
         displayDelegate?.ads(loader: loader, failedWith: adErrorData)
+        behaviour.didFailToLoadADSWith(error: adErrorData.adError)
         print(adErrorData.adError.message)
     }
     
